@@ -1,16 +1,16 @@
 if fs.exists("/ar-base.lua") then
-    term.write("Applying an update...")
+    term.write("\nApplying an update...")
     os.sleep(1)
-    term.write("Deleted old ar-base.lua...")
+    term.write("\nDeleted old ar-base.lua...")
     fs.delete("/ar-base.lua")
     os.sleep(1)
 end
 if fs.exists("/startup.lua") then
-    term.write("Deleted old startup.lua...")
+    term.write("\nDeleted old startup.lua...")
     fs.delete("/startup.lua")
     os.sleep(1)
 end
-term.write("Installing ar-base.lua...")
+term.write("\nInstalling ar-base.lua...")
 os.sleep(1)
 shell.run("wget https://raw.githubusercontent.com/Mag1cpunch/MeteorOS-AR/main/ar-base.lua")
 term.write("\nInstalled")
