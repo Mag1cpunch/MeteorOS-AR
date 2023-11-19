@@ -5,7 +5,7 @@ local function update()
     arctrl.clear()
     arctrl.drawString("MeteorOS - Version 1.0", 0, 0, 255)
     if plrdtc then
-        local plrs = plrdtc.getPlayersInRange(20)
+        local plrs = plrdtc.getOnlinePlayers()
         local postable = {}
         if next(plrs) == nil then
             arctrl.drawString("No players in range", 0, -1, 255)
