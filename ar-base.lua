@@ -11,7 +11,7 @@ local function update()
     repeat
         event, id = os.pullEvent("timer")
     until id == timer
-    arctrl.drawRightboundString(os.date(), 300, 0, 0x99ff07)
+    arctrl.drawRightboundString(os.date(), 600, 0, 0x99ff07)
 
     if plrdtc then
         local plrs = plrdtc.getOnlinePlayers()
