@@ -7,7 +7,7 @@ local function update()
     if plrdtc then
         local plrs = plrdtc.getPlayersInRange(20)
         local postable = {}
-        if not next(plrs) then
+        if next(plrs) == nil then
             arctrl.drawString("No players in range", 0, -1, 255)
         else
             for i in ipairs(plrs) do
