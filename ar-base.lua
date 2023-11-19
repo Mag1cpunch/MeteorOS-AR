@@ -14,7 +14,7 @@ local function update()
         else
             for _, playerName in ipairs(plrs) do
                 local plrpos = plrdtc.getPlayerPos(playerName)
-                table.insert(postable, playerName .. ": X:" .. plrpos.x .. ", Y:" .. plrpos.y)
+                table.insert(postable, playerName .. ": X:" .. plrpos.x .. ", Y:" .. plrpos.y.."Z:".. plrpos.z)
                 os.sleep(0.1)
             end
             local joinedString = table.concat(postable, "\n")
