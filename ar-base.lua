@@ -7,7 +7,7 @@ local function update()
     if plrdtc then
         local plrs = plrdtc.getPlayersInRange(20)
         local postable = {}
-        for i in #plrs do
+        for i in ipairs(plrs) do
             local plrpos = plrs.getPosition(i)
             table.insert(postable, i..": X:"..plrpos.x..", Y:"..plrpos.y)
             os.sleep(0.1)
