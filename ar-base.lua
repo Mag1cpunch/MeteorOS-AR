@@ -22,5 +22,5 @@ end
 
 while true do
     update()
-    os.sleep(0.1)
+    os.sleep(0.01)
 end
