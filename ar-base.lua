@@ -11,7 +11,7 @@ local function update()
         local postable = {}
 
         if not next(plrs) then
-            arctrl.drawString("No players in range", 0, -1, 255)
+            arctrl.drawString("No players found", 0, -1, 255)
         else
             for _, playerName in ipairs(plrs) do
                 local plrpos = plrdtc.getPlayerPos(playerName)
