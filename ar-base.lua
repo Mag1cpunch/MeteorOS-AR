@@ -1,6 +1,7 @@
 local arctrl = peripheral.find("arController")
 local plrdtc = peripheral.find("playerDetector")
 
+--Update the glasses display every 2 seconds
 local function update()
     arctrl.clear()
     arctrl.drawString("MeteorOS - Version 1.0", 0, 0, 255)
