@@ -17,9 +17,9 @@ local function update()
                 table.insert(postable, playerName .. ": X:" .. plrpos.x .. ", Y:" .. plrpos.y)
                 os.sleep(0.1)
             end
+            local joinedString = table.concat(postable, "\n")
+            arctrl.drawString(joinedString, 0, 1, 255)
         end
-
-        arctrl.drawString(postable, 0, 1, 255)
     end
 end
 
