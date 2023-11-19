@@ -33,7 +33,7 @@ local function update()
     if envdtc then
         local rad = envdtc.getRadiation()
         local rawrad = envdtc.getRadiationRaw()
-        arctrl.drawString("Radiation Level: "..rad..", Raw Radiation Level: "..rawrad, 240, 35, 0xabcd00)
+        arctrl.drawString("Radiation Level: "..rad, 240, 35, 0xabcd00)
         if envdtc.isThunder() then
             arctrl.drawString("Weather: Thunder", 260, 55, 0x006ffd)
         elseif envdtc.isRaining() then
