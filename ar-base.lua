@@ -1,5 +1,6 @@
 local arctrl = peripheral.find("arController")
 local plrdtc = peripheral.find("playerDetector")
+local envdtc = peripheral.find("environmentDetector")
 
 --Update the glasses display every 2 seconds
 local function update()
@@ -29,9 +30,21 @@ local function update()
             arctrl.drawString("Server Players: "..joinedString, 240, 15, 0x51fffa)
         end
     end
+    if envdtc then
+        local rad = envdtc.getRadiation()
+        local rawrad = envdtc.getRadiationRaw()
+        arctrl.drawString("Radiation Level: "..rad..", Raw Radiation Level: "..rawrad, 240, 35, 0xabcd00)
+        if envdtc.isThunder() then
+            arctrl.drawString("Weather: Thunder", 260, 55, 0x006ffd)
+        elseif envdtc.isRaining() then
+            arctrl.drawString("Weather: Rain", 260, 55, 0x006ffd)
+        elseif envdtc.isSunny() then
+            arctrl.drawString("Weather: Clear", 260, 55, 0xe0e700)
+        end
+    end
 end
-
+term.write("AR Server Started")
 while true do
     update()
-    os.sleep(2)
+    os.sleep(3)
 end
