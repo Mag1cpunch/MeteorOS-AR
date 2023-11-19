@@ -18,7 +18,7 @@ local function update()
                 os.sleep(0.1)
             end
             local joinedString = table.concat(postable, "\n")
-            arctrl.drawString(joinedString, 0, 1, 255)
+            arctrl.drawString(joinedString, 0, 6, 255)
         end
     end
 end
