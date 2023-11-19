@@ -3,7 +3,7 @@ local plrdtc = peripheral.find("playerDetector")
 
 local function update()
     arctrl.clear()
-    arctrl.drawString("MeteorOS - Version 1.0", 0, 0, 2)
+    arctrl.drawString("MeteorOS - Version 1.0", 0, 0, 255)
     if plrdtc then
         local plrs = plrdtc.getPlayersInRange(20)
         local postable = {}
