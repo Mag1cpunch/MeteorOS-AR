@@ -9,7 +9,7 @@ local function update()
         local plrs = plrdtc.getOnlinePlayers()
         local postable = {}
 
-        if next(plrs) == nil then
+        if not next(plrs) then
             arctrl.drawString("No players in range", 0, -1, 255)
         else
             for _, playerName in ipairs(plrs) do
@@ -18,12 +18,12 @@ local function update()
                 os.sleep(0.1)
             end
             local joinedString = table.concat(postable, "\n")
-            arctrl.drawString(joinedString, 0, 6, 255)
+            arctrl.drawString(joinedString, 0, 15, 255)
         end
     end
 end
 
 while true do
     update()
-    os.sleep(0.01)
+    os.sleep(2)
 end
